@@ -2,96 +2,90 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rebecca McDonnell | Collected With Intention</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebecca McDonnell</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #f7f6f2, #eef4ef);
-    color: #333;
+    background-color: #0b3d2e;
+    color: #f4f4f4;
 }
 
 header {
-    padding: 50px 20px 30px;
     text-align: center;
+    padding: 60px 20px 30px;
 }
 
-header h1 {
-    font-size: 2.6em;
-    margin: 0;
-    font-weight: 600;
-    color: #2f5d4a;
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 64px;
+    color: #c9a24d;
+    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.1em;
-    letter-spacing: 3px;
-    color: #b8a35d;
-    margin-top: 10px;
+.subtitle {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color: #e6d8a2;
 }
 
 nav {
     text-align: center;
-    padding-bottom: 30px;
-}
-
-nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #2f5d4a;
-    font-size: 0.95em;
-}
-
-nav a:hover {
-    color: #b8a35d;
-}
-
-.section {
-    max-width: 720px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.section h2 {
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 35px;
-    color: #2f5d4a;
-}
-
-.section p {
-    line-height: 1.9;
-    font-size: 1.05em;
-    text-align: center;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 18px;
     margin-top: 30px;
 }
 
-.placeholder {
-    background: linear-gradient(135deg, #e6e1cc, #dcd6b8);
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #c9a24d;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #c9a24d;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.gallery div {
+    background-color: rgba(255,255,255,0.05);
     height: 180px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2f5d4a;
-    font-size: 0.85em;
+    border: 1px solid #c9a24d55;
 }
 
 footer {
     text-align: center;
-    padding: 40px 20px;
-    font-size: 0.85em;
-    color: #b8a35d;
+    padding: 40px;
+    font-size: 12px;
+    color: #c9a24d;
+    letter-spacing: 2px;
 }
 </style>
 </head>
@@ -100,76 +94,43 @@ footer {
 
 <header>
     <h1>Rebecca McDonnell</h1>
-    <p>Collected With Intention</p>
+    <div class="subtitle">ROCKHOUND • CREATIVE • CAT MOM</div>
+
+    <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#blog">BLOG</a>
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank">INSTAGRAM</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#views">Views</a>
-    <a href="#stones">Stones for Sale</a>
-    <a href="#videos">Videos</a>
-    <a href="#blog">Blog</a>
-    <a href="#instagram">Instagram</a>
-</nav>
-
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I collect what speaks to me. Not just stones — but moments, textures, light, stories, and pieces of nature that feel meaningful.<br><br>
-
-        Rock Girl Cat Mom is a space for things collected with intention.<br><br>
-
-        From shoreline stones and quiet views, to creative projects, memories, and moments that make me pause — everything here is chosen because it carries feeling.<br><br>
-
-        I believe nature holds stories if you slow down enough to notice them. Some become art. Some become treasures. Some simply become part of the journey.<br><br>
-
-        This space is where I share those finds — thoughtfully, honestly, and with intention.<br><br>
-
-        Welcome to my collection.
-    </p>
+<section id="about">
+<h2>ABOUT</h2>
+<p>
+Hi, I’m Rebecca. I love rocks, creativity, nature, and my five cats — Olive, Puzzle, Finn, Nala and Smokey. 
+This space is where I share my finds, stories, and little pieces of beauty that make me smile.
+</p>
 </section>
 
-<section id="views" class="section">
-    <h2>Views</h2>
-    <div class="grid">
-        <div class="placeholder">View</div>
-        <div class="placeholder">View</div>
-        <div class="placeholder">View</div>
-        <div class="placeholder">View</div>
-    </div>
+<section id="gallery">
+<h2>GALLERY</h2>
+<div class="gallery">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
 </section>
 
-<section id="stones" class="section">
-    <h2>Stones for Sale</h2>
-    <div class="grid">
-        <div class="placeholder">Stone</div>
-        <div class="placeholder">Stone</div>
-        <div class="placeholder">Stone</div>
-        <div class="placeholder">Stone</div>
-    </div>
-</section>
-
-<section id="videos" class="section">
-    <h2>Videos</h2>
-    <div class="grid">
-        <div class="placeholder">Video</div>
-        <div class="placeholder">Video</div>
-        <div class="placeholder">Video</div>
-    </div>
-</section>
-
-<section id="blog" class="section">
-    <h2>Blog</h2>
-    <p>Quiet reflections and collected thoughts coming soon.</p>
-</section>
-
-<section id="instagram" class="section">
-    <h2>Instagram</h2>
-    <p><strong>@rock.girl.cat.mom</strong></p>
+<section id="blog">
+<h2>BLOG</h2>
+<p>
+Coming soon — stories, moments, finds, and thoughts.
+</p>
 </section>
 
 <footer>
-    © 2026 Rebecca McDonnell · Collected With Intention
+© Rebecca McDonnell
 </footer>
 
 </body>
