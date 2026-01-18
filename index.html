@@ -1,186 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rebecca McDonnell</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --green:#0b2a1f;
-      --green-dark:#061711;
-      --gold:#d8b15a;
-      --pink:#f2b6c6;
-      --text:#f6f3ee;
-      --muted:rgba(246,243,238,.7);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Inter,system-ui,sans-serif;
-      background:linear-gradient(135deg,var(--green),var(--green-dark));
-      color:var(--text);
-    }
-    header{
-      padding:24px;
-      border-bottom:1px solid rgba(216,177,90,.3);
-    }
-    .brand{
-      text-transform:uppercase;
-      letter-spacing:5px;
-      font-weight:200;
-      font-size:14px;
-    }
-    .accent{
-      font-family:"Great Vibes",cursive;
-      color:var(--gold);
-      font-size:32px;
-      margin-top:4px;
-    }
-    main{
-      max-width:1100px;
-      margin:auto;
-      padding:40px 20px;
-    }
-    h2{
-      font-family:"Great Vibes",cursive;
-      color:var(--gold);
-      font-size:42px;
-      margin:0 0 10px;
-    }
-    p{
-      color:var(--muted);
-      max-width:700px;
-      line-height:1.6;
-      margin:0 0 18px;
-    }
-    nav{
-      margin-top:14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    nav a{
-      color:var(--muted);
-      border:1px solid rgba(216,177,90,.25);
-      padding:8px 12px;
-      border-radius:999px;
-      text-decoration:none;
-      font-size:13px;
-      font-weight:300;
-    }
-    nav a:hover{ color:var(--text); border-color:rgba(216,177,90,.5); }
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-      margin-top:22px;
-    }
-    .card{
-      border:1px solid rgba(216,177,90,.3);
-      border-radius:18px;
-      overflow:hidden;
-      background:rgba(255,255,255,.03);
-      box-shadow:0 18px 45px rgba(0,0,0,.35);
-    }
-    .card img{
-      width:100%;
-      height:240px;
-      object-fit:cover;
-      display:block;
-      background:rgba(0,0,0,.2);
-    }
-    .card-body{ padding:16px; }
-    .name{
-      font-weight:300;
-      letter-spacing:1px;
-      text-transform:uppercase;
-      font-size:13px;
-      margin:0;
-      color:rgba(246,243,238,.92);
-    }
-    .price{
-      margin-top:8px;
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(216,177,90,.45);
-      background:rgba(216,177,90,.10);
-      color:var(--text);
-      font-size:13px;
-      font-weight:300;
-    }
-    footer{
-      margin-top:60px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-    footer a{ color:var(--gold); text-decoration:none; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="pattern"></div>
 
-<header>
-  <div class="brand">Rebecca McDonnell</div>
-  <div class="accent">Collected with intention</div>
-
-  <nav aria-label="Primary">
-    <a href="#sale">Rocks for Sale</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-    <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
-  </nav>
-</header>
-
-<main>
-
-  <section id="sale">
-    <h2>Rocks for Sale</h2>
-    <p>Hand-collected stones and natural finds. Message me to purchase.</p>
-
-    <div class="grid">
-      <div class="card">
-        <img src="assets/sale/PXL_20260106_034847374.jpg" alt="White stone for sale">
-        <div class="card-body">
-          <p class="name">White Stone</p>
-          <span class="price">$8</span>
-        </div>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="name">Rebecca McDonnell</div>
+        <div class="accent">Collected with intention</div>
       </div>
 
-      <div class="card">
-        <img src="assets/sale/PXL_20260106_035459747.MP.jpg" alt="Orange stone for sale">
-        <div class="card-body">
-          <p class="name">Orange Stone</p>
-          <span class="price">$5</span>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/sale/PXL_20260106_035836908.MP.jpg" alt="Petrified wood for sale">
-        <div class="card-body">
-          <p class="name">Petrified Wood</p>
-          <span class="price">$15</span>
-        </div>
-      </div>
+      <nav class="links" aria-label="Primary">
+        <a href="sale.html">Rocks for Sale</a>
+        <a href="views.html">Views</a>
+        <a href="finds.html">Finds</a>
+        <a href="home-cats.html">Home & Cats</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <footer>
-    © <span id="year"></span> Rebecca McDonnell ·
-    <a href="https://rebecca-mcdonnell.github.io">rebecca-mcdonnell.github.io</a>
-  </footer>
+  <main class="wrap">
 
-</main>
+    <section class="hero">
+      <div class="card">
+        <div class="kicker"><span class="dot"></span> subtle • curated • elegant</div>
+        <h1>Rebecca McDonnell</h1>
+        <p class="subtitle">
+          Forest green, champagne gold, and dusty pink — rocks for sale first, then views, finds, and home + cats.
+        </p>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        <div class="sigLine">
+          <div class="sig">welcome</div>
+          <div class="pill">Thin typography • gold borders</div>
+          <div class="pill">Clean + professional</div>
+        </div>
 
+        <div class="ctaRow">
+          <a class="btn" href="sale.html">Shop Rocks</a>
+          <a class="btn secondary" href="views.html">See Views</a>
+          <a class="btn secondary" href="home-cats.html">Home & Cats</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sectionCard">
+        <div class="sectionTitleRow">
+          <h2 class="sectionTitle">Featured for Sale</h2>
+          <p class="sectionSub">Your first three listings (tap through on the Sale page to shop/inquire).</p>
+        </div>
+
+        <div class="grid">
+          <a class="tile" href="sale.html#white-8">
+            <div class="media">
+              <img src="assets/sale/PXL_20260106_034847374.jpg" alt="White stone for sale">
+            </div>
+            <div class="cap">
+              <div class="saleTop">
+                <p class="t" style="margin:0;">White Stone</p>
+                <span class="priceTag">$8</span>
+              </div>
+              <p class="m">Smooth white stone with dark inclusions.</p>
+            </div>
+          </a>
+
+          <a class="tile" href="sale.html#orange-5">
+            <div class="media">
+              <img src="assets/sale/PXL_20260106_035459747.MP.jpg" alt="Orange stone for sale">
+            </div>
+            <div class="cap">
+              <div class="saleTop">
+                <p class="t" style="margin:0;">Orange Stone</p>
+                <span class="priceTag">$5</span>
+              </div>
+              <p class="m">Warm orange tones with smoky patterning.</p>
+            </div>
+          </a>
+
+          <a class="tile" href="sale.html#petrified-wood-15">
+            <div class="media">
+              <img src="assets/sale/PXL_20260106_035836908.MP.jpg" alt="Petrified wood for sale">
+            </div>
+            <div class="cap">
+              <div class="saleTop">
+                <p class="t" style="margin:0;">Petrified Wood</p>
+                <span class="priceTag">$15</span>
+              </div>
+              <p class="m">Petrified wood with natural banding.</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn" href="sale.html">Go to Shop</a>
+          <a class="btn secondary" href="contact.html">Inquire / Buy</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footerCard">
+        <div style="font-family:'Great Vibes', cursive; color: var(--gold); font-size: 34px; line-height: 1;">
+          thank you for visiting
+        </div>
+        <div class="small">© <span id="y"></span> Rebecca McDonnell • Built on GitHub Pages</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
