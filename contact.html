@@ -14,15 +14,16 @@
     }
 
     header {
-      padding: 24px;
+      padding: 28px 20px;
       text-align: center;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      margin-top: 10px;
+      gap: 22px;
+      margin-top: 12px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -34,22 +35,13 @@
     main {
       max-width: 600px;
       margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
+      padding: 30px 20px;
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin-top: 30px;
-    }
-
-    label {
-      font-weight: 600;
     }
 
     input, textarea {
@@ -61,20 +53,42 @@
     }
 
     textarea {
-      resize: vertical;
       min-height: 120px;
     }
 
     button {
-      margin-top: 10px;
       padding: 12px;
       background: #4a7c59;
-      color: white;
+      color: #fff;
       border: none;
       border-radius: 10px;
       font-size: 16px;
-      cursor: pointer;
     }
+  </style>
+</head>
 
-    button:hover {
-      opacity: 0.
+<body>
+
+<header>
+  <h1>Contact</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="tel" placeholder="Phone Number">
+    <input type="email" placeholder="Email Address">
+    <textarea placeholder="Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
+
+</body>
+</html>
