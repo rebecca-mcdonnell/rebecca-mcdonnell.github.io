@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
-
-    header {
-      padding: 28px 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #4a7c59;
-      font-weight: 600;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      line-height: 1.7;
-      font-size: 18px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header>
+    <h1 class="site-title">Blog</h1>
+    <p class="tagline">Little updates & stories (coming soon)</p>
 
-<header>
-  <h1>Blog</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <p>
-    This space will be used for reflections, finds, and updates.
-    New posts coming soon.
-  </p>
-</main>
+  <main>
+    <div class="panel">
+      <h2 class="h-cursive">Coming Soon</h2>
+      <div class="divider"></div>
+      <p>
+        This is where I’ll post updates, new finds, and the little stories behind them.
+        Check back soon.
+      </p>
+      <p>
+        In the meantime, I’m most active on Instagram:
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">
+          @rock.girl.cat.mom
+        </a>
+      </p>
+    </div>
+  </main>
 
+  <footer>
+    © <span id="year"></span> Rebecca McDonnell
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
