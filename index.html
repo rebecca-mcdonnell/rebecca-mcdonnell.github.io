@@ -680,4 +680,58 @@
         <div style="font-family:'Great Vibes', cursive; color: var(--gold); font-size: 34px; line-height: 1;">
           thank you for visiting
         </div>
-        <div class="small">© <span id="y"></span> Rebec
+        <div class="small">© <span id="y"></span> Rebecca McDonnell • Built on GitHub Pages</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lbCard" role="dialog" aria-modal="true" aria-label="Image preview">
+      <img class="lbImg" id="lbImg" alt="Preview">
+      <div class="lbCap">
+        <p class="t" id="lbTitle"></p>
+        <p class="m" id="lbMeta"></p>
+        <div class="lbHint">Tap outside the image (or press Esc) to close.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const lb = document.getElementById("lightbox");
+    const lbImg = document.getElementById("lbImg");
+    const lbTitle = document.getElementById("lbTitle");
+    const lbMeta = document.getElementById("lbMeta");
+
+    function openLB(src, title, meta){
+      if(!src) return;
+      lbImg.src = src;
+      lbTitle.textContent = title || "";
+      lbMeta.textContent = meta || "";
+      lb.classList.add("open");
+      lb.setAttribute("aria-hidden", "false");
+    }
+    function closeLB(){
+      lb.classList.remove("open");
+      lb.setAttribute("aria-hidden", "true");
+      lbImg.src = "";
+    }
+
+    document.querySelectorAll(".tile").forEach(card => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        const hasImg = img && img.complete && img.naturalWidth > 0;
+        const full = card.dataset.full || (hasImg ? img.src : "");
+        if(!full) return;
+        openLB(full, card.dataset.title, card.dataset.meta);
+      });
+    });
+
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLB(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLB(); });
+  </script>
+</body>
+</html>
