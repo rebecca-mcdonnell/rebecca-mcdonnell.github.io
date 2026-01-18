@@ -1,81 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #ffffff;
-      color: #333;
-    }
-
-    header {
-      padding: 28px 20px;
-      text-align: center;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 12px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #4a7c59;
-      font-weight: 600;
-    }
-
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 20px;
-      line-height: 1.7;
-      font-size: 18px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header>
+    <h1 class="site-title">About</h1>
+    <p class="tagline">A little more about me</p>
 
-<header>
-  <h1>About Me</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<main>
-  <p>
-    I’m Rebecca — a rock collector, creative, and nature lover who enjoys finding
-    beauty in everyday places.
-  </p>
+  <main>
+    <div class="panel">
+      <h2 class="h-cursive">Hi, I’m Rebecca</h2>
+      <div class="divider"></div>
 
-  <p>
-    This site is a place for sharing my finds, thoughts, and projects, as well as
-    offering select stones for purchase.
-  </p>
+      <p>
+        I moved to <strong>St. Catharines</strong> this fall and I’m genuinely excited to be in the
+        <strong>Niagara region</strong> — the water, the green spaces, and that “new chapter” feeling
+        you get when a place starts to feel like home.
+      </p>
 
-  <p>
-    You can also follow along on Instagram for regular updates and new finds:
-    <br><br>
-    <strong>
-      <a href="https://instagram.com/rock.girl.cat.mom" target="_blank">
-        instagram.com/rock.girl.cat.mom
-      </a>
-    </strong>
-  </p>
-</main>
+      <p>
+        I’m naturally curious and a little obsessed with small details, which is probably why rock collecting
+        stuck so quickly. It started as something calming and fun… and then I blinked and suddenly I had
+        a whole collection (and a camera roll full of “look at this one!!”).
+      </p>
 
+      <p>
+        This site is where I share my finds, creative projects, and little updates as I explore Niagara.
+        Some stones are available for purchase, others are just here to be appreciated — either way, every
+        piece has a story behind it.
+      </p>
+
+      <p>
+        You can also follow along on Instagram:
+        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">
+          @rock.girl.cat.mom
+        </a>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Rebecca McDonnell
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
