@@ -1,129 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rebecca McDonnell</title>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Girl Cat Mom — Shop</title>
+  <meta name="description" content="Shop one-of-one beach-found stone and sea glass jewelry from Niagara, Canada." />
+  <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="pattern"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#shop" aria-label="Go to shop">
+        <div class="logo-dot" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-name">Rock Girl Cat Mom</div>
+          <div class="brand-tag">Niagara, Canada • one-of-one shoreline jewelry</div>
+        </div>
+      </a>
 
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="name">Rebecca McDonnell</div>
-        <div class="accent">Collected with intention</div>
-      </div>
-
-      <nav class="links" aria-label="Primary">
-        <a href="sale.html">Rocks for Sale</a>
-        <a href="views.html">Views</a>
-        <a href="finds.html">Finds</a>
-        <a href="home-cats.html">Home & Cats</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com/rock.girl.cat.mom" target="_blank" rel="noopener">Instagram</a>
+      <nav class="nav">
+        <a href="#shop">Shop</a>
+        <a href="#collections">Collections</a>
+        <a href="#how">How to buy</a>
+        <a href="#about">About</a>
+        <a class="btn small" href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main>
+    <!-- SHOP FIRST HERO -->
+    <section id="shop" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="kicker">SHOP</div>
+          <h1>One-of-one pieces from the shoreline.</h1>
+          <p>
+            Beach-found stones and sea glass, kept simple and wearable.
+            Each piece is unique — once it’s gone, it’s gone.
+          </p>
 
-    <section class="hero">
-      <div class="card">
-        <div class="kicker"><span class="dot"></span> subtle • curated • elegant</div>
-        <h1>Rebecca McDonnell</h1>
-        <p class="subtitle">
-          Forest green, champagne gold, and dusty pink — rocks for sale first, then views, finds, and home + cats.
-        </p>
+          <div class="hero-cta">
+            <a class="btn" href="#featured">Browse featured</a>
+            <a class="btn ghost" href="#collections">Shop by collection</a>
+          </div>
 
-        <div class="sigLine">
-          <div class="sig">welcome</div>
-          <div class="pill">Thin typography • gold borders</div>
-          <div class="pill">Clean + professional</div>
+          <div class="badges">
+            <span class="pill">🌿 Natural</span>
+            <span class="pill">🌊 Sea Glass</span>
+            <span class="pill">💗 Seasonal</span>
+          </div>
+
+          <div class="tiny-note">
+            <strong>Buying:</strong> DM me on Instagram or use the contact form below. I’ll confirm availability + shipping.
+          </div>
         </div>
 
-        <div class="ctaRow">
-          <a class="btn" href="sale.html">Shop Rocks</a>
-          <a class="btn secondary" href="views.html">See Views</a>
-          <a class="btn secondary" href="home-cats.html">Home & Cats</a>
-        </div>
-      </div>
-    </section>
+        <div class="hero-side">
+          <div class="card">
+            <div class="card-top">
+              <div class="badge">New</div>
+              <div class="mini">Updated weekly</div>
+            </div>
 
-    <section>
-      <div class="sectionCard">
-        <div class="sectionTitleRow">
-          <h2 class="sectionTitle">Featured for Sale</h2>
-          <p class="sectionSub">Your first three listings (tap through on the Sale page to shop/inquire).</p>
-        </div>
+            <div class="mini-grid">
+              <!-- Replace these with your best product photos -->
+              <figure class="thumb">
+                <img src="images/featured-1.jpg" alt="Featured pendant 1" />
+              </figure>
+              <figure class="thumb">
+                <img src="images/featured-2.jpg" alt="Featured pendant 2" />
+              </figure>
+              <figure class="thumb">
+                <img src="images/featured-3.jpg" alt="Featured pendant 3" />
+              </figure>
+              <figure class="thumb">
+                <img src="images/featured-4.jpg" alt="Featured pendant 4" />
+              </figure>
+            </div>
 
-        <div class="grid">
-          <a class="tile" href="sale.html#white-8">
-            <div class="media">
-              <img src="assets/sale/PXL_20260106_034847374.jpg" alt="White stone for sale">
+            <div class="card-bottom">
+              <a class="link" href="#featured">Go to featured pieces →</a>
             </div>
-            <div class="cap">
-              <div class="saleTop">
-                <p class="t" style="margin:0;">White Stone</p>
-                <span class="priceTag">$8</span>
-              </div>
-              <p class="m">Smooth white stone with dark inclusions.</p>
-            </div>
-          </a>
-
-          <a class="tile" href="sale.html#orange-5">
-            <div class="media">
-              <img src="assets/sale/PXL_20260106_035459747.MP.jpg" alt="Orange stone for sale">
-            </div>
-            <div class="cap">
-              <div class="saleTop">
-                <p class="t" style="margin:0;">Orange Stone</p>
-                <span class="priceTag">$5</span>
-              </div>
-              <p class="m">Warm orange tones with smoky patterning.</p>
-            </div>
-          </a>
-
-          <a class="tile" href="sale.html#petrified-wood-15">
-            <div class="media">
-              <img src="assets/sale/PXL_20260106_035836908.MP.jpg" alt="Petrified wood for sale">
-            </div>
-            <div class="cap">
-              <div class="saleTop">
-                <p class="t" style="margin:0;">Petrified Wood</p>
-                <span class="priceTag">$15</span>
-              </div>
-              <p class="m">Petrified wood with natural banding.</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="ctaRow">
-          <a class="btn" href="sale.html">Go to Shop</a>
-          <a class="btn secondary" href="contact.html">Inquire / Buy</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="footerCard">
-        <div style="font-family:'Great Vibes', cursive; color: var(--gold); font-size: 34px; line-height: 1;">
-          thank you for visiting
+    <!-- COLLECTIONS -->
+    <section id="collections" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collections</h2>
+          <p>Browse by vibe. Each item is listed once and marked sold when it’s gone.</p>
         </div>
-        <div class="small">© <span id="y"></span> Rebecca McDonnell • Built on GitHub Pages</div>
-      </div>
-    </footer>
 
+        <div class="grid3">
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Natural</h3>
+              <span class="chip">earth tones</span>
+            </div>
+            <p>Greens, quartz seams, and beach-worn stones — simple and wearable.</p>
+            <a class="link" href="#featured">Shop Natural →</a>
+          </article>
+
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Sea Glass</h3>
+              <span class="chip">frosted</span>
+            </div>
+            <p>Lake glass and shoreline finds — minimal settings, soft color.</p>
+            <a class="link" href="#featured">Shop Sea Glass →</a>
+          </article>
+
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Seasonal</h3>
+              <span class="chip">limited</span>
+            </div>
+            <p>Small drops (Valentine, summer, winter) — when the beach gives it.</p>
+            <a class="link" href="#featured">Shop Seasonal →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section id="featured" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Featured pieces</h2>
+          <p>Replace the placeholders with your real photos + prices. Add “SOLD” when needed.</p>
+        </div>
+
+        <div class="product-grid">
+          <!-- PRODUCT CARD -->
+          <article class="product">
+            <div class="product-media">
+              <img src="images/natural-quartz-vein.jpg" alt="Natural pendant with a quartz vein" />
+              <div class="tag">Natural</div>
+            </div>
+            <div class="product-meta">
+              <div class="product-name">Natural Pendant — “Quartz Vein”</div>
+              <div class="product-sub">Stainless bail • one-of-one</div>
+              <div class="product-row">
+                <div class="price">$38 CAD</div>
+                <div class="status in">Available</div>
+              </div>
+              <div class="product-actions">
+                <a class="btn small" href="#how">How to buy</a>
+                <a class="btn small ghost" href="#contact">Reserve</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img src="images/sea-glass-frost.jpg" alt="Frosted sea glass pendant" />
+              <div class="tag">Sea Glass</div>
+            </div>
+            <div class="product-meta">
+              <div class="product-name">Sea Glass — “Frost”</div>
+              <div class="product-sub">Beach-found • minimal</div>
+              <div class="product-row">
+                <div class="price">$32 CAD</div>
+                <div class="status in">Available</div>
+              </div>
+              <div class="product-actions">
+                <a class="btn small" href="#how">How to buy</a>
+                <a class="btn small ghost" href="#contact">Reserve</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img src="images/earth-warm-stone.jpg" alt="Warm earth tone pendant" />
+              <div class="tag">Earth</div>
+            </div>
+            <div class="product-meta">
+              <div class="product-name">Earth Tone — “Warm Stone”</div>
+              <div class="product-sub">Chain-ready • simple</div>
+              <div class="product-row">
+                <div class="price">$28 CAD</div>
+                <div class="status sold">Sold</div>
+              </div>
+              <div class="product-actions">
+                <a class="btn small" href="#how">How to buy</a>
+                <a class="btn small ghost" href="#contact">Request similar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product">
+            <div class="product-media">
+              <img src="images/natural-speckled-green.jpg" alt="Speckled green pendant" />
+              <div class="tag">Natural</div>
+            </div>
+            <div class="product-meta">
+              <div class="product-name">Natural — “Speckled Green”</div>
+              <div class="product-sub">Everyday wear • one-of-one</div>
+              <div class="product-row">
+                <div class="price">$35 CAD</div>
+                <div class="status in">Available</div>
+              </div>
+              <div class="product-actions">
+                <a class="btn small" href="#how">How to buy</a>
+                <a class="btn small ghost" href="#contact">Reserve</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="center">
+          <a class="btn" href="#contact">Ask about availability / shipping</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section id="how" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How to buy</h2>
+          <p>Fast and simple — I confirm availability before taking payment.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Pick your piece</div>
+              <div class="muted">Screenshot the item + name (ex: “Quartz Vein”).</div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Message me</div>
+              <div class="muted">
+                DM on Instagram or send the contact form. I’ll reply with availability + total (shipping included).
+              </div>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Pay + ship</div>
+              <div class="muted">
+                I’ll confirm payment options and ship within 2–3 business days (or local pickup in Niagara).
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="how-cta">
+          <a class="btn" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">DM on Instagram</a>
+          <a class="btn ghost" href="#contact">Use contact form</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>Short + trustworthy.</p>
+        </div>
+
+        <div class="about">
+          <p>
+            Hi, I’m Rebecca. I collect shoreline finds around Niagara, Canada — stones, sea glass, and anything that
+            looks like it has a story. I turn a few into simple jewelry you can actually wear.
+          </p>
+          <p class="muted">
+            Want to see new finds daily? Instagram:
+            <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">rock.girl.cat.mom</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Send availability questions, custom requests, or reserve a piece.</p>
+        </div>
+
+        <div class="contact-card">
+          <!-- IMPORTANT: replace the email below with your real email -->
+          <form class="form" action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" rows="6" placeholder="Which piece are you interested in? (ex: Quartz Vein)"></textarea>
+            </label>
+
+            <button class="btn" type="submit">Send</button>
+            <p class="muted tiny">You can swap this for a Google Form later if you want.</p>
+          </form>
+
+          <div class="side">
+            <div class="mini-card">
+              <div class="mini-title">Shipping</div>
+              <div class="muted">
+                Canada shipping available. Local pickup in Niagara.
+              </div>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-title">Pieces are one-of-one</div>
+              <div class="muted">
+                If something sells, I can make a similar vibe — never an exact copy.
+              </div>
+            </div>
+
+            <div class="mini-card">
+              <div class="mini-title">Quick link</div>
+              <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">Message on Instagram →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="muted">© <span id="year"></span> Rock Girl Cat Mom</div>
+      <div class="muted">Built on GitHub Pages</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
