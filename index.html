@@ -1,304 +1,240 @@
-:root{
-  --bg:#0f1110;
-  --panel:#151816;
-  --panel2:#0f1210;
-  --text:#f3f3f3;
-  --muted:#b8beb9;
-  --accent:#c9a24a;  
-  --accent2:#2b6b4f; 
-  --pink:#d78aa6;    
-  --border: rgba(255,255,255,.10);
-  --pink-border: rgba(215,138,166,.35);
-  --shadow: 0 18px 50px rgba(0,0,0,.35);
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rock Girl Cat Mom — Shop</title>
+  <meta name="description" content="One-of-one shoreline jewelry made from beach-found stone and sea glass in Niagara, Canada." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
 
-*{ box-sizing:border-box; }
-html,body{ margin:0; padding:0; }
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#collections" aria-label="Go to collections">
+        <div class="logo-dot" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-name">Rock Girl Cat Mom</div>
+          <div class="brand-tag">Niagara, Canada • shoreline finds • one-of-one pieces</div>
+        </div>
+      </a>
 
-body{
-  font-family: Inter, system-ui, sans-serif;
-  background:
-    radial-gradient(1200px 800px at 15% -10%, rgba(43,107,79,.25), transparent 60%),
-    radial-gradient(1000px 700px at 90% 0%, rgba(201,162,74,.18), transparent 55%),
-    radial-gradient(900px 650px at 10% 95%, rgba(215,138,166,.14), transparent 55%),
-    var(--bg);
-  color: var(--text);
-  line-height:1.55;
-}
+      <nav class="nav">
+        <a href="#collections">Collections</a>
+        <a href="#shop">Shop</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+        <a class="btn small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-img{ max-width:100%; display:block; }
-.wrap{ width:min(1120px, 92%); margin:0 auto; }
+  <main>
+    <!-- COLLECTIONS (FIRST) -->
+    <section id="collections" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collections</h2>
+          <p>Organized by material and mood. Each piece remains one-of-one.</p>
+        </div>
 
-/* HEADER */
+        <div class="grid3">
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Natural</h3>
+              <span class="chip">stone</span>
+            </div>
+            <p>
+              Beach-worn stones with quiet colour — greens, neutrals, and the occasional quartz seam.
+              Finished to keep the surface honest.
+            </p>
+          </article>
 
-.site-header{
-  position: sticky;
-  top:0;
-  z-index: 50;
-  backdrop-filter: blur(10px);
-  background: rgba(15,17,16,.65);
-  border-bottom: 1px solid var(--pink-border);
-}
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Sea Glass</h3>
+              <span class="chip">lake glass</span>
+            </div>
+            <p>
+              Frosted pieces shaped by time and water. Minimal settings, soft edges, and clear light.
+              Simple on purpose.
+            </p>
+          </article>
 
-.header-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 0;
-}
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Valentine</h3>
+              <span class="chip">limited</span>
+            </div>
+            <p>
+              A small colour story built around softer tones and heart-season energy — finished simply and photographed honestly.
+              When the shoreline gives it.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-.brand{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  text-decoration:none;
-  color:var(--text);
-}
+    <!-- SHOP (BELOW COLLECTIONS) -->
+    <section id="shop" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <div class="kicker">SHOP</div>
+          <h1>Pieces shaped by the lake, finished by hand.</h1>
+          <p>
+            These are shoreline finds from Niagara — stones and sea glass chosen for texture, colour, and the way
+            they hold light. Each piece is finished slowly and kept simple so the material stays the focus.
+          </p>
 
-.logo-dot{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-  background: linear-gradient(135deg,var(--accent2),var(--accent));
-  box-shadow:
-    0 0 0 6px rgba(201,162,74,.08),
-    0 0 0 10px rgba(215,138,166,.10);
-}
+          <div class="hero-cta">
+            <a class="btn" href="#contact">Ask about availability</a>
+            <a class="btn ghost" href="#collections">Browse collections</a>
+          </div>
 
-.brand-name{
-  font-family: Fraunces, serif;
-  font-weight:800;
-  font-size:18px;
-}
+          <div class="badges">
+            <span class="pill">🌿 Natural</span>
+            <span class="pill">🌊 Sea Glass</span>
+            <span class="pill pink">💗 Valentine</span>
+          </div>
 
-.brand-tag{
-  font-size:12px;
-  color:var(--muted);
-}
+          <div class="tiny-note">
+            <strong>Availability:</strong> Each piece is listed once. If it’s marked <em>Sold</em>, it’s gone — but you may
+            request a similar feel (never an exact match).
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* NAV */
+    <!-- HOW TO BUY -->
+    <section id="how" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>A simple process — clear, respectful, and low pressure.</p>
+        </div>
 
-.nav{
-  display:flex;
-  gap:14px;
-}
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <div class="step-title">Choose a piece</div>
+              <div class="muted">Screenshot or note the collection and description.</div>
+            </div>
+          </div>
 
-.nav a{
-  color:var(--muted);
-  text-decoration:none;
-  font-weight:600;
-}
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <div class="step-title">Message me</div>
+              <div class="muted">DM on Instagram or use the contact form to confirm availability.</div>
+            </div>
+          </div>
 
-.nav a:hover{
-  color:var(--pink);
-}
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <div class="step-title">Payment + delivery</div>
+              <div class="muted">I’ll confirm payment and ship within 2–3 business days, or arrange local pickup.</div>
+            </div>
+          </div>
+        </div>
 
-/* BUTTONS */
+        <div class="how-cta">
+          <a class="btn" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">Message on Instagram</a>
+          <a class="btn ghost" href="#contact">Use contact form</a>
+        </div>
+      </div>
+    </section>
 
-.btn{
-  padding:12px 16px;
-  border-radius:12px;
-  background: linear-gradient(135deg,var(--accent2),var(--accent));
-  color:#0a0b0a;
-  font-weight:800;
-  text-decoration:none;
-  border:1px solid var(--pink-border);
-  box-shadow:var(--shadow);
-}
+    <!-- ABOUT -->
+    <section id="about" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>About</h2>
+          <p>Why these materials, and why this approach.</p>
+        </div>
 
-.btn:hover{
-  filter:brightness(1.05);
-}
+        <div class="about">
+          <p>
+            I’m Rebecca, based in Niagara, Canada. I collect shoreline finds — stones, sea glass, and pieces that
+            show evidence of time: soft edges, natural seams, and surface texture that can’t be replicated.
+          </p>
+          <p>
+            I work slowly, finish carefully, and photograph honestly.
+            The goal is to keep the material as the focus.
+          </p>
+          <p class="muted">
+            Instagram:
+            <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">rock.girl.cat.mom</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-.btn.ghost{
-  background:transparent;
-  color:var(--text);
-  border:1px solid var(--pink-border);
-  box-shadow:none;
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Questions, availability checks, or reserving a piece.</p>
+        </div>
 
-.btn.small{
-  padding:8px 12px;
-  font-size:13px;
-}
+        <div class="contact-card">
+          <form class="form" action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
 
-/* HERO */
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
 
-.hero{
-  padding:44px 0 22px;
-}
+            <label>
+              Message
+              <textarea name="message" rows="6" placeholder="Tell me what you’re looking for…"></textarea>
+            </label>
 
-.hero-inner{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:24px;
-}
+            <button class="btn" type="submit">Send</button>
+            <p class="muted tiny">Tip: you can swap this for a Google Form later if you prefer.</p>
+          </form>
 
-.kicker{
-  font-size:12px;
-  letter-spacing:.18em;
-  font-weight:900;
-  color:var(--pink);
-}
+          <div class="side">
+            <div class="mini-card">
+              <div class="mini-title">Shipping</div>
+              <div class="muted">Canada-wide shipping. Local pickup available.</div>
+            </div>
 
-.hero h1{
-  font-family: Fraunces, serif;
-  font-size:clamp(30px,4vw,46px);
-}
+            <div class="mini-card">
+              <div class="mini-title">One-of-one</div>
+              <div class="muted">Each shoreline piece is unique.</div>
+            </div>
 
-.hero p{
-  color:var(--muted);
-}
+            <div class="mini-card">
+              <div class="mini-title">Instagram</div>
+              <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">Send DM →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.badges{
-  display:flex;
-  gap:10px;
-}
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="muted">© <span id="year"></span> Rock Girl Cat Mom</div>
+      <div class="muted">Built on GitHub Pages</div>
+    </div>
+  </footer>
 
-.pill{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid var(--pink-border);
-  background:rgba(215,138,166,.08);
-}
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
-.pill.pink{
-  background:rgba(215,138,166,.18);
-  border-color:var(--pink);
-}
 
-/* CARDS */
-
-.card,
-.tile,
-.product,
-.about,
-.form,
-.mini-card,
-.step{
-  border:1px solid var(--pink-border);
-  border-radius:18px;
-  background:rgba(255,255,255,.04);
-  box-shadow:var(--shadow);
-}
-
-/* COLLECTION GRID */
-
-.grid3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.tile{
-  padding:16px;
-}
-
-.tile-top{
-  display:flex;
-  justify-content:space-between;
-}
-
-.chip{
-  font-size:12px;
-  border:1px solid var(--pink-border);
-  padding:4px 8px;
-  border-radius:999px;
-}
-
-/* MINI GRID */
-
-.mini-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:10px;
-}
-
-.thumb{
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid var(--pink-border);
-}
-
-/* STEPS */
-
-.steps{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-
-.step{
-  padding:16px;
-  display:flex;
-  gap:12px;
-}
-
-.step-num{
-  width:30px;
-  height:30px;
-  border-radius:10px;
-  background:rgba(215,138,166,.15);
-  border:1px solid var(--pink);
-  color:var(--pink);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-}
-
-/* CONTACT */
-
-.contact-card{
-  display:grid;
-  grid-template-columns:1fr .8fr;
-  gap:14px;
-}
-
-input,textarea{
-  width:100%;
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid var(--pink-border);
-  background:rgba(15,17,16,.7);
-  color:var(--text);
-}
-
-input:focus,
-textarea:focus{
-  outline:none;
-  border-color:var(--pink);
-}
-
-/* FOOTER */
-
-.site-footer{
-  padding:22px 0 34px;
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  border-top:1px solid var(--pink-border);
-  padding-top:18px;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-  .hero-inner{
-    grid-template-columns:1fr;
-  }
-
-  .grid3,
-  .steps{
-    grid-template-columns:1fr;
-  }
-
-  .contact-card{
-    grid-template-columns:1fr;
-  }
-
-}
