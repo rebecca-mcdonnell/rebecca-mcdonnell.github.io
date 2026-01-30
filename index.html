@@ -1,373 +1,304 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rock Girl Cat Mom — Shop</title>
-  <meta name="description" content="One-of-one shoreline jewelry made from beach-found stone and sea glass in Niagara, Canada." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
+:root{
+  --bg:#0f1110;
+  --panel:#151816;
+  --panel2:#0f1210;
+  --text:#f3f3f3;
+  --muted:#b8beb9;
+  --accent:#c9a24a;  
+  --accent2:#2b6b4f; 
+  --pink:#d78aa6;    
+  --border: rgba(255,255,255,.10);
+  --pink-border: rgba(215,138,166,.35);
+  --shadow: 0 18px 50px rgba(0,0,0,.35);
+}
 
-<body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#collections" aria-label="Go to collections">
-        <div class="logo-dot" aria-hidden="true"></div>
-        <div class="brand-text">
-          <div class="brand-name">Rock Girl Cat Mom</div>
-          <div class="brand-tag">Niagara, Canada • shoreline finds • one-of-one pieces</div>
-        </div>
-      </a>
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
 
-      <nav class="nav">
-        <a href="#collections">Collections</a>
-        <a href="#shop">Shop</a>
-        <a href="#how">How it works</a>
-        <a href="#about">About</a>
-        <a class="btn small" href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+body{
+  font-family: Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 800px at 15% -10%, rgba(43,107,79,.25), transparent 60%),
+    radial-gradient(1000px 700px at 90% 0%, rgba(201,162,74,.18), transparent 55%),
+    radial-gradient(900px 650px at 10% 95%, rgba(215,138,166,.14), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  line-height:1.55;
+}
 
-  <main>
-    <!-- COLLECTIONS (NOW FIRST) -->
-    <section id="collections" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Collections</h2>
-          <p>Organized by material and mood. Each piece remains one-of-one.</p>
-        </div>
+img{ max-width:100%; display:block; }
+.wrap{ width:min(1120px, 92%); margin:0 auto; }
 
-        <div class="grid3">
-          <article class="tile">
-            <div class="tile-top">
-              <h3>Natural</h3>
-              <span class="chip">stone</span>
-            </div>
-            <p>
-              Beach-worn stones with quiet colour — greens, neutrals, and the occasional quartz seam.
-              Finished to keep the surface honest.
-            </p>
-            <a class="link" href="#featured">View Natural pieces →</a>
-          </article>
+/* HEADER */
 
-          <article class="tile">
-            <div class="tile-top">
-              <h3>Sea Glass</h3>
-              <span class="chip">lake glass</span>
-            </div>
-            <p>
-              Frosted pieces shaped by time and water. Minimal settings, soft edges, and clear light.
-              Simple on purpose.
-            </p>
-            <a class="link" href="#featured">View Sea Glass pieces →</a>
-          </article>
+.site-header{
+  position: sticky;
+  top:0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(15,17,16,.65);
+  border-bottom: 1px solid var(--pink-border);
+}
 
-          <article class="tile">
-            <div class="tile-top">
-              <h3>Valentine</h3>
-              <span class="chip">limited</span>
-            </div>
-            <p>
-              A small colour story built around softer tones and heart-season energy — finished simply and photographed honestly.
-              When the shoreline gives it.
-            </p>
-            <a class="link" href="#featured">View Valentine pieces →</a>
-          </article>
-        </div>
-      </div>
-    </section>
+.header-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+}
 
-    <!-- SHOP (NOW BELOW COLLECTIONS) -->
-    <section id="shop" class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-copy">
-          <div class="kicker">SHOP</div>
-          <h1>Pieces shaped by the lake, finished by hand.</h1>
-          <p>
-            These are shoreline finds from Niagara — stones and sea glass chosen for texture, colour, and the way
-            they hold light. Each piece is finished slowly and kept simple so the material stays the focus.
-          </p>
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+  color:var(--text);
+}
 
-          <div class="hero-cta">
-            <a class="btn" href="#featured">View available pieces</a>
-            <a class="btn ghost" href="#collections">Browse by collection</a>
-          </div>
+.logo-dot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background: linear-gradient(135deg,var(--accent2),var(--accent));
+  box-shadow:
+    0 0 0 6px rgba(201,162,74,.08),
+    0 0 0 10px rgba(215,138,166,.10);
+}
 
-          <div class="badges">
-            <span class="pill">🌿 Natural</span>
-            <span class="pill">🌊 Sea Glass</span>
-            <span class="pill pink">💗 Valentine</span>
-          </div>
+.brand-name{
+  font-family: Fraunces, serif;
+  font-weight:800;
+  font-size:18px;
+}
 
-          <div class="tiny-note">
-            <strong>Availability:</strong> I list each piece once. If it’s marked <em>Sold</em>, it’s gone — but you can
-            request a similar feel (never an exact match).
-          </div>
-        </div>
+.brand-tag{
+  font-size:12px;
+  color:var(--muted);
+}
 
-        <div class="hero-side">
-          <div class="card">
-            <div class="card-top">
-              <div class="badge">Featured</div>
-              <div class="mini">Updated as new pieces are finished</div>
-            </div>
+/* NAV */
 
-            <div class="mini-grid">
-              <!-- Replace these with your best product photos -->
-              <figure class="thumb">
-                <img src="images/featured-1.jpg" alt="Featured piece 1" />
-              </figure>
-              <figure class="thumb">
-                <img src="images/featured-2.jpg" alt="Featured piece 2" />
-              </figure>
-              <figure class="thumb">
-                <img src="images/featured-3.jpg" alt="Featured piece 3" />
-              </figure>
-              <figure class="thumb">
-                <img src="images/featured-4.jpg" alt="Featured piece 4" />
-              </figure>
-            </div>
+.nav{
+  display:flex;
+  gap:14px;
+}
 
-            <div class="card-bottom">
-              <a class="link" href="#featured">Go to listings →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+.nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:600;
+}
 
-    <!-- FEATURED PRODUCTS -->
-    <section id="featured" class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Available pieces</h2>
-          <p>
-            Each listing includes a name so it’s easy to reference. Mark items <em>Sold</em> as needed.
-            Replace the photos and text below with your real listings.
-          </p>
-        </div>
+.nav a:hover{
+  color:var(--pink);
+}
 
-        <div class="product-grid">
-          <!-- PRODUCT CARD -->
-          <article class="product">
-            <div class="product-media">
-              <img src="images/natural-quartz-vein.jpg" alt="Natural pendant with a quartz seam" />
-              <div class="tag">Natural</div>
-            </div>
-            <div class="product-meta">
-              <div class="product-name">Natural Pendant — “Quartz Vein”</div>
-              <div class="product-sub">Stainless bail • one-of-one</div>
-              <div class="product-row">
-                <div class="price">$38 CAD</div>
-                <div class="status in">Available</div>
-              </div>
-              <div class="product-actions">
-                <a class="btn small" href="#how">How it works</a>
-                <a class="btn small ghost" href="#contact">Inquire / Reserve</a>
-              </div>
-            </div>
-          </article>
+/* BUTTONS */
 
-          <article class="product">
-            <div class="product-media">
-              <img src="images/sea-glass-frost.jpg" alt="Frosted sea glass pendant" />
-              <div class="tag">Sea Glass</div>
-            </div>
-            <div class="product-meta">
-              <div class="product-name">Sea Glass — “Frost”</div>
-              <div class="product-sub">Beach-found • minimal setting</div>
-              <div class="product-row">
-                <div class="price">$32 CAD</div>
-                <div class="status in">Available</div>
-              </div>
-              <div class="product-actions">
-                <a class="btn small" href="#how">How it works</a>
-                <a class="btn small ghost" href="#contact">Inquire / Reserve</a>
-              </div>
-            </div>
-          </article>
+.btn{
+  padding:12px 16px;
+  border-radius:12px;
+  background: linear-gradient(135deg,var(--accent2),var(--accent));
+  color:#0a0b0a;
+  font-weight:800;
+  text-decoration:none;
+  border:1px solid var(--pink-border);
+  box-shadow:var(--shadow);
+}
 
-          <article class="product">
-            <div class="product-media">
-              <img src="images/earth-warm-stone.jpg" alt="Warm earth tone pendant" />
-              <div class="tag">Earth</div>
-            </div>
-            <div class="product-meta">
-              <div class="product-name">Earth Tone — “Warm Stone”</div>
-              <div class="product-sub">Simple finish • chain-ready</div>
-              <div class="product-row">
-                <div class="price">$28 CAD</div>
-                <div class="status sold">Sold</div>
-              </div>
-              <div class="product-actions">
-                <a class="btn small" href="#how">How it works</a>
-                <a class="btn small ghost" href="#contact">Request similar</a>
-              </div>
-            </div>
-          </article>
+.btn:hover{
+  filter:brightness(1.05);
+}
 
-          <article class="product">
-            <div class="product-media">
-              <img src="images/natural-speckled-green.jpg" alt="Speckled green pendant" />
-              <div class="tag">Natural</div>
-            </div>
-            <div class="product-meta">
-              <div class="product-name">Natural — “Speckled Green”</div>
-              <div class="product-sub">Everyday wear • one-of-one</div>
-              <div class="product-row">
-                <div class="price">$35 CAD</div>
-                <div class="status in">Available</div>
-              </div>
-              <div class="product-actions">
-                <a class="btn small" href="#how">How it works</a>
-                <a class="btn small ghost" href="#contact">Inquire / Reserve</a>
-              </div>
-            </div>
-          </article>
-        </div>
+.btn.ghost{
+  background:transparent;
+  color:var(--text);
+  border:1px solid var(--pink-border);
+  box-shadow:none;
+}
 
-        <div class="center">
-          <a class="btn" href="#contact">Ask about availability or shipping</a>
-        </div>
-      </div>
-    </section>
+.btn.small{
+  padding:8px 12px;
+  font-size:13px;
+}
 
-    <!-- HOW TO BUY -->
-    <section id="how" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>How it works</h2>
-          <p>A simple process — clear, respectful, and low pressure.</p>
-        </div>
+/* HERO */
 
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <div class="step-title">Choose a listing</div>
-              <div class="muted">Use the piece name (example: “Quartz Vein”) when you message me.</div>
-            </div>
-          </div>
+.hero{
+  padding:44px 0 22px;
+}
 
-          <div class="step">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <div class="step-title">Message to confirm</div>
-              <div class="muted">
-                DM me on Instagram or use the contact form. I’ll confirm availability and the total with shipping (if needed).
-              </div>
-            </div>
-          </div>
+.hero-inner{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:24px;
+}
 
-          <div class="step">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <div class="step-title">Payment + delivery</div>
-              <div class="muted">
-                Once confirmed, I’ll share payment options and ship within 2–3 business days, or arrange local pickup in Niagara.
-              </div>
-            </div>
-          </div>
-        </div>
+.kicker{
+  font-size:12px;
+  letter-spacing:.18em;
+  font-weight:900;
+  color:var(--pink);
+}
 
-        <div class="how-cta">
-          <a class="btn" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">Message on Instagram</a>
-          <a class="btn ghost" href="#contact">Use the contact form</a>
-        </div>
-      </div>
-    </section>
+.hero h1{
+  font-family: Fraunces, serif;
+  font-size:clamp(30px,4vw,46px);
+}
 
-    <!-- ABOUT -->
-    <section id="about" class="section alt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>About</h2>
-          <p>Why these materials, and why this approach.</p>
-        </div>
+.hero p{
+  color:var(--muted);
+}
 
-        <div class="about">
-          <p>
-            I’m Rebecca, based in Niagara, Canada. I collect shoreline finds — stones, sea glass, and pieces that
-            show evidence of time: soft edges, natural seams, and surface texture that can’t be replicated.
-          </p>
-          <p>
-            I don’t mass-produce. I finish a small number of pieces carefully and photograph them honestly.
-            The goal is simple: keep the material as the focus, and make something you’ll actually wear.
-          </p>
-          <p class="muted">
-            I share new finds and process clips on Instagram:
-            <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">rock.girl.cat.mom</a>
-          </p>
-        </div>
-      </div>
-    </section>
+.badges{
+  display:flex;
+  gap:10px;
+}
 
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p>Questions, availability checks, custom requests, or reserving a piece.</p>
-        </div>
+.pill{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--pink-border);
+  background:rgba(215,138,166,.08);
+}
 
-        <div class="contact-card">
-          <!-- IMPORTANT: replace the email below with your real email -->
-          <form class="form" action="mailto:YOUR_EMAIL_HERE@example.com" method="post" enctype="text/plain">
-            <label>
-              Name
-              <input type="text" name="name" placeholder="Your name" required />
-            </label>
+.pill.pink{
+  background:rgba(215,138,166,.18);
+  border-color:var(--pink);
+}
 
-            <label>
-              Email
-              <input type="email" name="email" placeholder="you@email.com" required />
-            </label>
+/* CARDS */
 
-            <label>
-              Message
-              <textarea name="message" rows="6" placeholder="Which piece are you interested in? (ex: Quartz Vein)"></textarea>
-            </label>
+.card,
+.tile,
+.product,
+.about,
+.form,
+.mini-card,
+.step{
+  border:1px solid var(--pink-border);
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  box-shadow:var(--shadow);
+}
 
-            <button class="btn" type="submit">Send</button>
-            <p class="muted tiny">Tip: you can swap this for a Google Form later if you prefer.</p>
-          </form>
+/* COLLECTION GRID */
 
-          <div class="side">
-            <div class="mini-card">
-              <div class="mini-title">Shipping</div>
-              <div class="muted">Canada shipping available. Local pickup in Niagara.</div>
-            </div>
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
 
-            <div class="mini-card">
-              <div class="mini-title">One-of-one</div>
-              <div class="muted">
-                No two shoreline pieces match exactly. If something sells, I can create a similar feel — never a replica.
-              </div>
-            </div>
+.tile{
+  padding:16px;
+}
 
-            <div class="mini-card">
-              <div class="mini-title">Quick link</div>
-              <a class="link" href="https://www.instagram.com/rock.girl.cat.mom/" target="_blank" rel="noreferrer">Message on Instagram →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+.tile-top{
+  display:flex;
+  justify-content:space-between;
+}
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div class="muted">© <span id="year"></span> Rock Girl Cat Mom</div>
-      <div class="muted">Built on GitHub Pages</div>
-    </div>
-  </footer>
+.chip{
+  font-size:12px;
+  border:1px solid var(--pink-border);
+  padding:4px 8px;
+  border-radius:999px;
+}
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+/* MINI GRID */
+
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.thumb{
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid var(--pink-border);
+}
+
+/* STEPS */
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.step{
+  padding:16px;
+  display:flex;
+  gap:12px;
+}
+
+.step-num{
+  width:30px;
+  height:30px;
+  border-radius:10px;
+  background:rgba(215,138,166,.15);
+  border:1px solid var(--pink);
+  color:var(--pink);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:900;
+}
+
+/* CONTACT */
+
+.contact-card{
+  display:grid;
+  grid-template-columns:1fr .8fr;
+  gap:14px;
+}
+
+input,textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--pink-border);
+  background:rgba(15,17,16,.7);
+  color:var(--text);
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:var(--pink);
+}
+
+/* FOOTER */
+
+.site-footer{
+  padding:22px 0 34px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  border-top:1px solid var(--pink-border);
+  padding-top:18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero-inner{
+    grid-template-columns:1fr;
+  }
+
+  .grid3,
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .contact-card{
+    grid-template-columns:1fr;
+  }
+
+}
