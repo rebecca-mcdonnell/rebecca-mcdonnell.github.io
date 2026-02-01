@@ -16,7 +16,153 @@
   --border: rgba(255,255,255,.10);
   --shadow: 0 18px 50px rgba(0,0,0,.35);
   --pink-glow: 0 0 0 1px rgba(215,138,166,.18), 0 0 22px rgba(215,138,166,.10);
+
+  /* Cream shop palette (used only in overrides below) */
+  --cream:#f6f0e6;
+  --cream2:#fbf7f0;
+  --ink:#151411;
+  --ink-muted: rgba(21,20,17,.68);
+  --ink-border: rgba(21,20,17,.12);
+  --ink-shadow: 0 18px 50px rgba(15,17,16,.10);
 }
+
+/* =========================================================
+   CREAM SHOP MODE
+   Turn on for the Rocks page by adding class="page-cream" to <body>
+   OR use .cream-section on a specific section.
+   ========================================================= */
+
+/* Full-page cream mode */
+body.page-cream{
+  --bg: var(--cream);
+  --panel: rgba(255,255,255,.72);
+  --panel2: rgba(255,255,255,.55);
+  --text: var(--ink);
+  --muted: var(--ink-muted);
+  --border: var(--ink-border);
+  --shadow: var(--ink-shadow);
+
+  background:
+    radial-gradient(1200px 800px at 15% -10%, rgba(43,107,79,.12), transparent 60%),
+    radial-gradient(1000px 700px at 90% 0%, rgba(201,162,74,.10), transparent 55%),
+    radial-gradient(900px 650px at 10% 95%, rgba(215,138,166,.12), transparent 55%),
+    radial-gradient(800px 520px at 85% 88%, rgba(215,138,166,.08), transparent 55%),
+    var(--bg);
+  color: var(--text);
+}
+
+/* Cream section mode (use on just the Rocks section if needed) */
+.cream-section{
+  --bg: var(--cream);
+  --panel: rgba(255,255,255,.72);
+  --panel2: rgba(255,255,255,.55);
+  --text: var(--ink);
+  --muted: var(--ink-muted);
+  --border: var(--ink-border);
+  --shadow: var(--ink-shadow);
+
+  background:
+    radial-gradient(900px 650px at 10% 95%, rgba(215,138,166,.10), transparent 55%),
+    radial-gradient(1000px 700px at 90% 0%, rgba(201,162,74,.10), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  border-top: 1px solid rgba(215,138,166,.22);
+  border-bottom: 1px solid rgba(215,138,166,.22);
+}
+
+/* Header in cream mode: keep it airy + boutique */
+body.page-cream .site-header{
+  background: rgba(246,240,230,.75);
+  border-bottom: 1px solid rgba(215,138,166,.40);
+}
+
+/* Nav/link colors in cream mode */
+body.page-cream .nav a{ color: rgba(21,20,17,.70); }
+body.page-cream .nav a:hover{ color: var(--pink); }
+body.page-cream .brand{ color: var(--ink); }
+body.page-cream .brand-tag{ color: rgba(21,20,17,.55); }
+
+/* Cards + panels look like “gallery labels” on cream */
+body.page-cream .tile,
+body.page-cream .about,
+body.page-cream .form,
+body.page-cream .mini-card,
+body.page-cream .step,
+.cream-section .tile,
+.cream-section .about,
+.cream-section .form,
+.cream-section .mini-card,
+.cream-section .step{
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(215,138,166,.28);
+  box-shadow: 0 0 0 1px rgba(215,138,166,.10);
+}
+
+body.page-cream .tile:hover,
+body.page-cream .about:hover,
+body.page-cream .form:hover,
+body.page-cream .mini-card:hover,
+body.page-cream .step:hover,
+.cream-section .tile:hover,
+.cream-section .about:hover,
+.cream-section .form:hover,
+.cream-section .mini-card:hover,
+.cream-section .step:hover{
+  border-color: rgba(215,138,166,.55);
+  box-shadow: var(--shadow), 0 0 0 1px rgba(215,138,166,.14), 0 0 22px rgba(215,138,166,.10);
+}
+
+/* Inputs in cream mode (no dark boxes) */
+body.page-cream input,
+body.page-cream textarea,
+.cream-section input,
+.cream-section textarea{
+  background: rgba(255,255,255,.78);
+  color: var(--ink);
+  border: 1px solid rgba(215,138,166,.30);
+}
+
+body.page-cream input:focus,
+body.page-cream textarea:focus,
+.cream-section input:focus,
+.cream-section textarea:focus{
+  border-color: rgba(215,138,166,.70);
+  box-shadow: 0 0 0 1px rgba(215,138,166,.18), 0 0 22px rgba(215,138,166,.10);
+}
+
+/* Buttons still look “you” on cream */
+body.page-cream .btn.ghost,
+.cream-section .btn.ghost{
+  color: var(--ink);
+  border: 1px solid rgba(215,138,166,.45);
+}
+
+/* Tiny helpers for product cards (optional to use in HTML) */
+.price{
+  font-family: Fraunces, serif;
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--accent);
+}
+.tag{
+  display:inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(215,138,166,.55);
+  background: rgba(215,138,166,.16);
+}
+.product-img{
+  border-radius: 14px;
+  border: 1px solid rgba(215,138,166,.25);
+  box-shadow: 0 12px 30px rgba(15,17,16,.10);
+  overflow:hidden;
+}
+
+/* =========================================================
+   BASE STYLES (your original)
+   ========================================================= */
 
 *{ box-sizing:border-box; }
 html,body{ margin:0; padding:0; }
@@ -338,4 +484,5 @@ input:focus, textarea:focus{
   .steps{ grid-template-columns: 1fr; }
   .contact-card{ grid-template-columns: 1fr; }
 }
+
 
