@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600,800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- IMPORTANT: the ?v=4 forces browsers to load the newest CSS -->
-  <link rel="stylesheet" href="style.css?v=4" />
+  <!-- Cache-buster: bump v= number when you change CSS -->
+  <link rel="stylesheet" href="/style.css?v=7" />
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="index.html" aria-label="Go to home">
+      <a class="brand" href="/index.html" aria-label="Go to home">
         <span class="logo-dot" aria-hidden="true"></span>
         <span>
           <div class="brand-name">Rebecca Finds</div>
@@ -28,13 +28,13 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="views.html">Views</a>
-        <a href="home-cats.html">Home &amp; Cats</a>
-        <a href="blog.html">Blog</a>
-        <a href="rocks.html">Rocks for Sale</a>
-        <a href="contact.html">Contact</a>
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="/views.html">Views</a>
+        <a href="/home-cats.html">Home &amp; Cats</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/rocks/">Rocks for Sale</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -46,13 +46,11 @@
         <div>
           <div class="kicker">REBECCA FINDS</div>
           <h1>Small discoveries, collected with intention.</h1>
-          <p>
-            Shoreline stones, sea glass, and the little moments in between — from Niagara, Canada.
-          </p>
+          <p>Shoreline stones, sea glass, and the little moments in between — from Niagara, Canada.</p>
 
           <div class="hero-cta">
-            <a class="btn" href="rocks.html">Shop Rocks for Sale</a>
-            <a class="btn ghost" href="views.html">View Gallery</a>
+            <a class="btn" href="/rocks/">Shop Rocks for Sale</a>
+            <a class="btn ghost" href="/views.html">View Gallery</a>
           </div>
 
           <div class="badges">
@@ -63,14 +61,72 @@
 
           <div class="announce">
             <div class="announce-title">New: Rocks for Sale is live</div>
-            <div class="muted">
-              The shop page uses a warm cream “gallery canvas” so the stones feel boutique and intentional.
-            </div>
+            <div class="muted">The shop page uses a warm cream “gallery canvas” so the stones feel boutique and intentional.</div>
             <div class="announce-cta">
-              <a class="btn small" href="rocks.html">Go to shop</a>
-              <a class="btn ghost small" href="contact.html">Questions?</a>
+              <a class="btn small" href="/rocks/">Go to shop</a>
+              <a class="btn ghost small" href="/contact.html">Questions?</a>
             </div>
           </div>
 
           <div class="tiny-note">
-            If your page looks “stuck” in the old style, refresh with Ct
+            If anything looks “stuck,” hard refresh (Ctrl+Shift+R). The <b>?v=7</b> above helps too.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Collections</h2>
+          <p>Browse by mood — rocks, views, and cozy home life.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Rocks for Sale</h3>
+              <span class="chip">shop</span>
+            </div>
+            <p>One-of-one stones &amp; sea glass pieces with soft, luxe styling.</p>
+            <a class="btn small" href="/rocks/">Open shop</a>
+          </article>
+
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Views</h3>
+              <span class="chip">gallery</span>
+            </div>
+            <p>Niagara light, shoreline textures, and calm little scenes.</p>
+            <a class="btn small" href="/views.html">See views</a>
+          </article>
+
+          <article class="tile">
+            <div class="tile-top">
+              <h3>Home &amp; Cats</h3>
+              <span class="chip">life</span>
+            </div>
+            <p>Cozy corners, vintage finds, and the cat crew.</p>
+            <a class="btn small" href="/home-cats.html">Open</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <div class="brand-name">Rebecca Finds</div>
+        <div class="brand-tag">stone • sea glass • small discoveries</div>
+      </div>
+      <div class="muted tiny">© <span id="y"></span> Rebecca Finds</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
