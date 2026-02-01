@@ -36,6 +36,19 @@ body{
 img{ max-width:100%; display:block; }
 .wrap{ width:min(1120px, 92%); margin:0 auto; }
 
+/* Skip link (accessibility) */
+.skip{
+  position:absolute;
+  left:-999px;
+  top:10px;
+  background: rgba(255,255,255,.10);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--pink-border-soft);
+}
+.skip:focus{ left: 10px; z-index: 9999; }
+
 /* HEADER */
 .site-header{
   position: sticky;
@@ -114,7 +127,7 @@ img{ max-width:100%; display:block; }
 .hero{ padding: 44px 0 22px; }
 .hero-inner{
   display:grid;
-  grid-template-columns: 1fr; /* no side card now */
+  grid-template-columns: 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -134,172 +147,4 @@ img{ max-width:100%; display:block; }
   line-height: 1.05;
   margin: 0 0 12px;
 }
-.hero p{ color: var(--muted); font-size: 16px; margin:0 0 16px; }
-
-.hero-cta{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom: 14px; }
-
-.badges{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 14px; }
-.pill{
-  font-size: 12px;
-  color: var(--text);
-  background: rgba(215,138,166,.10);
-  border: 1px solid var(--pink-border-soft);
-  padding: 6px 10px;
-  border-radius: 999px;
-}
-.pill.pink{
-  border-color: rgba(215,138,166,.75);
-  background: rgba(215,138,166,.22);
-}
-
-.tiny-note{
-  color: var(--muted);
-  font-size: 13px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--pink-border-soft);
-  border-radius: 14px;
-  padding: 12px;
-  box-shadow: var(--pink-glow);
-}
-
-/* SECTIONS */
-.section{ padding: 42px 0; }
-.section.alt{
-  background: rgba(255,255,255,.03);
-  border-top: 1px solid var(--pink-border-soft);
-  border-bottom: 1px solid var(--pink-border-soft);
-}
-
-.section-head h2{
-  font-family: Fraunces, serif;
-  font-size: 28px;
-  margin: 0 0 6px;
-}
-.section-head p{ color: var(--muted); margin: 0 0 18px; }
-
-/* CARDS (pink borders) */
-.tile,
-.about,
-.form,
-.mini-card,
-.step{
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--pink-border-soft);
-  border-radius: 18px;
-  box-shadow: 0 0 0 1px rgba(215,138,166,.10);
-}
-
-.tile:hover,
-.about:hover,
-.form:hover,
-.mini-card:hover,
-.step:hover{
-  border-color: var(--pink-border);
-  box-shadow: var(--shadow), var(--pink-glow);
-}
-
-/* COLLECTION GRID */
-.grid3{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.tile{ padding: 16px; }
-.tile-top{
-  display:flex;
-  align-items:baseline;
-  justify-content:space-between;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-.tile h3{ margin: 0; }
-.tile p{ margin: 0 0 10px; color: var(--muted); }
-
-.chip{
-  font-size: 12px;
-  color: var(--muted);
-  border: 1px solid var(--pink-border-soft);
-  padding: 5px 8px;
-  border-radius: 999px;
-  background: rgba(215,138,166,.08);
-}
-
-/* STEPS */
-.steps{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.step{
-  padding: 16px;
-  display:flex;
-  gap: 12px;
-  align-items:flex-start;
-}
-.step-num{
-  width: 30px; height: 30px;
-  border-radius: 10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight: 900;
-  background: rgba(215,138,166,.20);
-  border: 1px solid rgba(215,138,166,.70);
-  color: rgba(215,138,166,.95);
-}
-.step-title{ font-weight: 900; margin-bottom: 3px; }
-
-/* CONTACT */
-.contact-card{
-  display:grid;
-  grid-template-columns: 1fr .8fr;
-  gap: 14px;
-  align-items:start;
-}
-
-label{ display:block; font-weight: 800; margin-bottom: 12px; }
-
-input, textarea{
-  width:100%;
-  margin-top: 6px;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--pink-border-soft);
-  background: rgba(15,17,16,.65);
-  color: var(--text);
-  outline: none;
-}
-input:focus, textarea:focus{
-  border-color: rgba(215,138,166,.85);
-  box-shadow: var(--pink-glow);
-}
-
-.side{ display:grid; gap: 14px; }
-.mini-title{ font-weight: 900; margin-bottom: 8px; }
-
-.link{ color: var(--accent); text-decoration:none; font-weight: 900; }
-.link:hover{ text-decoration: underline; color: var(--pink); }
-
-.site-footer{ padding: 22px 0 34px; }
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  gap: 16px;
-  flex-wrap:wrap;
-  border-top: 1px solid var(--pink-border-soft);
-  padding-top: 18px;
-}
-
-.muted{ color: var(--muted); }
-.tiny{ font-size: 12px; }
-
-@media (max-width: 900px){
-  .grid3{ grid-template-columns: 1fr; }
-  .steps{ grid-template-columns: 1fr; }
-  .contact-card{ grid-template-columns: 1fr; }
-}
-
-
-
-
-
+.hero p{ colo
